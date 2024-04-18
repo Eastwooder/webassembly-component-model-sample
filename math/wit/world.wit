@@ -1,0 +1,12 @@
+package docs:math@0.1.0;
+
+interface basic {
+    add: func(lhs: s64, rhs: s64) -> s64;
+    sub: func(lhs: s64, rhs: s64) -> s64;
+    mul: func(lhs: s64, rhs: s64) -> s64;
+    div: func(lhs: s64, rhs: s64) -> s64;
+}
+
+world math-ops {
+    export basic;
+}

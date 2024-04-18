@@ -1,0 +1,22 @@
+[package]
+name = "standalone"
+version = "0.1.0"
+edition = "2021"
+
+[package.metadata.component]
+package = "component:standalone"
+
+[package.metadata.component.target]
+path = "wit"
+
+[package.metadata.component.dependencies]
+
+[package.metadata.component.target.dependencies]
+"docs:calculator" = { path = "../calculator/wit" }
+"docs:math" = { path = "../math/wit" }
+
+# See more keys and their definitions at https://doc.rust-lang.org/cargo/reference/manifest.html
+
+[dependencies]
+clap = { version = "4.5.4", features = ["derive"] }
+wit-bindgen-rt = { version = "0.24.0", features = ["bitflags"] }

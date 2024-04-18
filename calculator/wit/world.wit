@@ -1,0 +1,17 @@
+package docs:calculator@0.1.0;
+
+interface calculate {
+    enum operation {
+        add,
+        sub,
+        mul,
+        div,
+    }
+    eval-expression: func(expr: string) -> s64;
+    calc-expression: func(op: operation, lhs: s64, rhs: s64) -> s64;
+}
+
+world calculator {
+    export calculate;
+    import docs:math/basic@0.1.0;
+}
